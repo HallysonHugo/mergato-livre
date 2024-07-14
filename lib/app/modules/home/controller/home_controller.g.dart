@@ -25,10 +25,27 @@ mixin _$HomeController on HomeControllerBase, Store {
     });
   }
 
+  late final _$loadingAtom =
+      Atom(name: 'HomeControllerBase.loading', context: context);
+
+  @override
+  bool get loading {
+    _$loadingAtom.reportRead();
+    return super.loading;
+  }
+
+  @override
+  set loading(bool value) {
+    _$loadingAtom.reportWrite(value, super.loading, () {
+      super.loading = value;
+    });
+  }
+
   @override
   String toString() {
     return '''
-cats: ${cats}
+cats: ${cats},
+loading: ${loading}
     ''';
   }
 }

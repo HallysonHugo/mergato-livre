@@ -19,6 +19,6 @@ class CatModel {
     name = json['name'];
     description = json['description'];
     origin = json['origin'];
-    image = json['image']['url'];
+    image = json['image']?['url'] ?? "";
   }
 }

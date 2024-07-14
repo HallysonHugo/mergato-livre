@@ -6,7 +6,7 @@ class HomeRepository {
 
   Future<Response> getCats() async {
     try {
-      return await _dio.get('breeds', queryParameters: {'limit': 10});
+      return await _dio.get('breeds', queryParameters: {'limit': 50});
     } catch (e) {
       rethrow;
     }

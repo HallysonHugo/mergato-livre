@@ -23,13 +23,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Observer(builder: (context) {
+      if (_homeController.loading) {
+        return const Center(child: CircularProgressIndicator());
+      }
       return ListView.builder(
         itemCount: _homeController.cats.length,
         itemBuilder: (context, index) {
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // Image(image: NetworkImage(_homeController.cats[index].image)),
+              if (_homeController.cats[index].image.isNotEmpty)
+                SizedBox(
+                    height: 500,
+                    width: 500,
+                    child: Image(
+                        image:
+                            NetworkImage(_homeController.cats[index].image))),
               ListTile(
                 title: Text(_homeController.cats[index].name),
                 subtitle: Text(_homeController.cats[index].description),

@@ -11,7 +11,14 @@ abstract class HomeControllerBase with Store {
   @observable
   List<CatModel> cats = [];
 
+  @observable
+  bool loading = false;
+
   Future getCats() async {
-    cats = await _homeService.getCats();
+    try {
+      cats = await _homeService.getCats();
+    } finally {
+      loading = false;
+    }
   }
 }
