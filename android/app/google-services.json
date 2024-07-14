@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896314024679",
+    "project_id": "mergato-livre",
+    "storage_bucket": "mergato-livre.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896314024679:android:7435dce367c13290db3842",
+        "android_client_info": {
+          "package_name": "com.example.mergato_livre"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJA_r5YwHrtXUfrFKJ353Eny4avwQXLmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
